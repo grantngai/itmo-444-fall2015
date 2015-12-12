@@ -49,7 +49,7 @@ $endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
     
 
 
-$link = mysqli_connect($endpoint,"controller","pngai-db","itmo444db") or die("Error " . mysqli_error($link));
+$link = mysqli_connect($endpoint,"controller","Pingvin5","pngaidb") or die("Error " . mysqli_error($link));
 /* check connection */
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
@@ -61,7 +61,7 @@ if (!($stmt = $link->prepare("INSERT INTO items (id, email,phone,filename,s3rawu
 }
 $email = $_POST['useremail'];
 $phone = $_POST['phone'];
-$s3rawurl = $url; 
+$s3rawurl = $result['ObjectURL']; 
 $filename = basename($_FILES['userfile']['name']);
 $s3finishedurl = $finishedurl;
 $status = 0;
