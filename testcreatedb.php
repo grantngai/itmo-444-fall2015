@@ -19,7 +19,7 @@ $endpoint = "";
 
 $endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
     // Do something with the message
-    echo "============". $ep . "================";
+    echo "============". $endpoint . "================";
 
 
 
