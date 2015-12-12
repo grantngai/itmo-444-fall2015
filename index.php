@@ -11,7 +11,7 @@ session_start();
 <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
 
 Send this file: <input name="userfile" type="file" /><br />
-Enter Email of user: <input name="userfile" type="file" /><br />
+Enter Email of user: <input type="email" name="useremail" /><br />
 Enter Phone of user (1xxxxxxxxxx): <input type="phone" name="phone">
 
 <input type="submit" value="Send File" />
