@@ -16,18 +16,18 @@ $client = RdsClient::factory(array(
 ));
 
 $result = $client->describeDBInstances(array(
-    'DBInstanceIdentifier' => 'pngai-db',
+    'DBInstanceIdentifier' => 'pngai',
 ));
 
 $endpoint = "";
 
 $endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
     // Do something with the message
-    echo "============". $ep . "================";
+    echo "============". $endpoint . "================";
 
   
 //echo "begin database";
-$link = mysqli_connect($endpoint,"controller","pngai-db","itmo444db") or die("Error " . mysqli_error($link));
+$link = mysqli_connect($endpoint,"controller","Pingvin5","pngaidb") or die("Error " . mysqli_error($link));
 
 /* check connection */
 if (mysqli_connect_errno()) {
